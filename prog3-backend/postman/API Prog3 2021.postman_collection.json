@@ -1,0 +1,127 @@
+{
+	"variables": [],
+	"info": {
+		"name": "API Prog3 2021",
+		"_postman_id": "111c3fd0-dfec-ff0e-f55a-734beb670b4d",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Listar Tareas",
+			"request": {
+				"url": "http://localhost:4000/api/tareas",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Tareas por Id",
+			"request": {
+				"url": "http://localhost:4000/api/tareas/614d1066bbdfba27ac6a4093",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta tarea",
+			"request": {
+				"url": {
+					"raw": "http://localhost:4000/api/tareas/consulta?q=Actividad",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"tareas",
+						"consulta"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Actividad",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Tarea - Cambia Estado",
+			"request": {
+				"url": "http://localhost:4000/api/tareas/614d147936f7c4da91e12cdd/cambiar-finalizada",
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Tarea",
+			"request": {
+				"url": "http://localhost:4000/api/tareas",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre\": \"Nueva Actividad\",\n  \"descripcion\": \"Descripcion nueva actividad\",\n  \"estaFinailzada\": false\t\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Tarea",
+			"request": {
+				"url": "http://localhost:4000/api/tareas/614d1066bbdfba27ac6a4093",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre\": \"Tarea 3\",\n  \"descripcion\": \"Descripcion tarea 3\",\n  \"estaFinailzada\": true\t\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Tareas por Id copy",
+			"request": {
+				"url": "http://localhost:4000/api/tareas/614d1066bbdfba27ac6a4093",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
